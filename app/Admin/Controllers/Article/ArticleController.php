@@ -77,6 +77,7 @@ class ArticleController extends Controller
             $grid->cat_id('分类');
             $grid->title('标题');
             $grid->author('作者');
+            $grid->content('内容');
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
         });
@@ -90,13 +91,13 @@ class ArticleController extends Controller
     protected function form()
     {
         return Admin::form(ArticleModel::class, function (Form $form) {
-
             $form->display('id', 'ID');
             $form->text('title','标题');
-            $form->select('cat_id','分类');
-            $form->php('content','内容');
+            $form->select('cat_id','分类')->options(['0'=>'顶级分类','1'=>'php']);
+            $form->editor('content','内容');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
+            $form->hidden('author')->value(Admin::user()->id);
         });
     }
 }
