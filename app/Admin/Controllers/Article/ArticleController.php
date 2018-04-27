@@ -97,7 +97,7 @@ class ArticleController extends Controller
             $form->editor('content','内容');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
-            $form->hidden('author')->value(Admin::user()->id);
+            $form->hidden('author')->value(Admin::user()->name);
         });
     }
 }
