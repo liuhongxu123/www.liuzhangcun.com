@@ -91,7 +91,7 @@ class CatController extends Controller
         return Admin::form(CatModel::class, function (Form $form) {
 
             $form->display('id', 'ID');
-            $form->select('parent_id','上级分类');
+            $form->select('parent_id','上级分类')->options(['0'=>'顶级分类']);
             $form->text('cat_name','分类名称');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

@@ -13,4 +13,5 @@ Route::group([
     $router->get('/', 'HomeController@index');
 
     $router->resource('cat', Cat\CatController::class);
+    $router->resource('article', Article\ArticleController::class);
 });
