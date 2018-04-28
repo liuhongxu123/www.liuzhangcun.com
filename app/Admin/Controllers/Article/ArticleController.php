@@ -72,9 +72,8 @@ class ArticleController extends Controller
     protected function grid()
     {
         return Admin::grid(ArticleModel::class, function (Grid $grid) {
-
             $grid->id('ID')->sortable();
-            $grid->cat_id('分类');
+            $grid->cat()->cat_name('分类');
             $grid->title('标题');
             $grid->author('作者');
             $grid->content('内容');
@@ -93,7 +92,7 @@ class ArticleController extends Controller
         return Admin::form(ArticleModel::class, function (Form $form) {
             $form->display('id', 'ID');
             $form->text('title','标题');
-            $form->select('cat_id','分类')->options(['0'=>'顶级分类','1'=>'php']);
+            $form->select('cat_id','分类')->options(['1'=>'PHP','2'=>'Laravel']);
             $form->editor('content','内容');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
