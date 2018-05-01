@@ -73,10 +73,9 @@ class ArticleController extends Controller
     {
         return Admin::grid(ArticleModel::class, function (Grid $grid) {
             $grid->id('ID')->sortable();
-            $grid->cat()->cat_name('分类');
             $grid->title('标题');
+            $grid->cat()->cat_name('分类');
             $grid->author('作者');
-            $grid->content('内容');
             $grid->created_at('创建时间');
             $grid->updated_at('更新时间');
         });

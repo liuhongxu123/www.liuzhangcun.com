@@ -20,6 +20,7 @@ class CreateArticleTable extends Migration
             $table->string('title',255)->nullable()->comment('文章标题');
             $table->string('author',100)->nullable()->comment('作者');
             $table->longText('content')->nullable()->comment('文章标题');
+            $table->unsignedInteger('status')->default('0')->comment('状态');
             $table->timestamps();
             $table->softDeletes();
         });

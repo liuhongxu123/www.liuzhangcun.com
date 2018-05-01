@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\Home\Index;
 
-use Illuminate\Http\Request;
+use App\Models\Article\ArticleModel;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
-    function index(){
-        return view('Home.Index.index');
+    function index(ArticleModel $article){
+        $data = $article::where('status','0')->get();
+        return view('Home.Index.index',compact('data'));
     }
 
 }

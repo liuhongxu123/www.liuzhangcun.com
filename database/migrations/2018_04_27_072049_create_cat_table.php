@@ -18,7 +18,7 @@ class CreateCatTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('parent_id')->nullable()->comment('上级分类');
             $table->string('cat_name',100)->nullable()->comment('分类名称');
-            $table->unsignedInteger('status')->nullable()->comment('状态');
+            $table->unsignedInteger('status')->default('0')->comment('状态');
             $table->timestamps();
             $table->softDeletes();
         });
