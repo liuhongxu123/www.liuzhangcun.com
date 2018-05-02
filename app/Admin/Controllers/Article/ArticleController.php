@@ -10,6 +10,7 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use App\Models\Cat\CatModel;
 
 class ArticleController extends Controller
 {
@@ -91,7 +92,7 @@ class ArticleController extends Controller
         return Admin::form(ArticleModel::class, function (Form $form) {
             $form->display('id', 'ID');
             $form->text('title','标题');
-            $form->select('cat_id','分类')->options(['1'=>'PHP','2'=>'Laravel']);
+            $form->select('cat_id','分类')->options(CatModel::all()->pluck('cat_name','id'));
             $form->editor('content','内容');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
