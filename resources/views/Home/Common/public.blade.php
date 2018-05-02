@@ -43,7 +43,7 @@
 
 <div>
     <p class="text-center">
-        版权所有 © 2017-2018 www.liuzhangcun.com  粤ICP备17112935号
+        vipxuge@gmail.com 版权所有 © 2017-2018 www.liuzhangcun.com  粤ICP备17112935号
     </p>
 </div>
 </body>
