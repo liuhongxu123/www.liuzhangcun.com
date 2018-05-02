@@ -1,5 +1,5 @@
 @extends('Home.Common.public')
-@section('title')刘洪旭的博客，php博客系统，个人博客系统@endsection
+@section('title')刘洪旭,刘洪旭的博客，php博客系统，个人博客系统@endsection
 
 @section('body')
     <div style="padding:0% 8%; margin:2%;">
