@@ -10,7 +10,7 @@
                 <tr>
                     <td style="padding:8px 8px 8px 15px;">作者：{{$v['author']}}</td>
                     <td>时间：{{$v['created_at']}}</td>
-                    <td style="border-top: 0px solid #ddd;">分类：{{$v['cat_name']}}</td>
+                    {{--<td style="border-top: 0px solid #ddd;">分类：{{$v['cat_id']}}</td>--}}
                 </tr>
             </table>
             <div class="panel-body" style="border-top: 0px solid #ddd;">
